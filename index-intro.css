@@ -1,5 +1,17 @@
 h1{
-    text-shadow:yellow 1px 0 10px;
-    color:white;
-    background-color:black;
+    color:rgb(54, 129, 241);
+    padding:5px 5px 5px 5px;
+}
+p{
+    border: 4px solid rgb(54, 184, 245);
+    padding:5px;
+}
+a:link{
+    text-decoration:rgb(90, 244, 92) underline;
+}
+a:visited{
+    color:rgb(90, 244, 92);
+}
+a:hover{
+    text-decoration: rgb(90, 244, 92) wavy underline;
 }
