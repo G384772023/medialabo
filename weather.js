@@ -47,20 +47,20 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 //緯度
-console.log("緯度:"+data.coord.lon);
+console.log('緯度:'+data.coord.lon);
 //経度
-console.log("緯度:"+data.coord.lat);
+console.log('緯度:'+data.coord.lat);
 //天気
-console.log("天気"+data.weather[0].description );
+console.log('天気:'+data.weather[0].description );
 //最低気温
-console.log("最低気温"+data.main.temp_min );
+console.log('最低気温:'+data.main.temp_min );
 //最高気温
-console.log("最高気温"+data.main.temp_max);
+console.log('最高気温:'+data.main.temp_max);
 //湿度
-console.log("湿度"+data.main.humidity);
+console.log('湿度:'+data.main.humidity);
 //風速
-console.log("風速"+data.wind.speed);
+console.log('風速:'+data.wind.speed);
 //風向
-console.log("風向"+data.wind.deg);
+console.log('風向:'+data.wind.deg);
 //都市名
-console.log("都市名"+data.name);
+console.log('都市名:'+data.name);
