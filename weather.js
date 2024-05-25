@@ -64,3 +64,6 @@ console.log('風速:'+data.wind.speed);
 console.log('風向:'+data.wind.deg);
 //都市名
 console.log('都市名:'+data.name);
+let div=document.querySelector('p#result');
+let ul=document.createElement('ul');
+div.insertAdjacentElement('beforeed',ul);
