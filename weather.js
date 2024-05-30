@@ -64,7 +64,49 @@ console.log('風速:'+data.wind.speed);
 console.log('風向:'+data.wind.deg);
 //都市名
 console.log('都市名:'+data.name);
-let div=document.querySelector('p#result');
+
+
+
+let div=document.querySelector('div#result');
 let ul=document.createElement('ul');
-div.insertAdjacentElement('beforeed',ul);
-let li=document.
+div.insertAdjacentElement('beforeend',ul);
+let li1=document.createElement('li');
+let li2=document.createElement('li');
+let li3=document.createElement('li');
+let li4=document.createElement('li');
+let li5=document.createElement('li');
+let li6=document.createElement('li');
+let li7=document.createElement('li');
+let li8=document.createElement('li');
+let li9=document.createElement('li');
+li1.textContent='緯度:'+data.coord.lon;
+li2.textContent='経度:'+data.coord.lat;
+li3.textContent='天気:'+data.weather[0].description;
+li4.textContent='最低気温:'+data.main.temp_min;
+li5.textContent='最高気温:'+data.main.temp_max;
+li6.textContent='湿度:'+data.main.humidity;
+li7.textContent='風速:'+data.wind.speed;
+li8.textContent='風向:'+data.wind.deg;
+li9.textContent='都市名:'+data.name;
+ul.insertAdjacentElement('beforeend',li1);
+ul.insertAdjacentElement('beforeend',li2);
+ul.insertAdjacentElement('beforeend',li3);
+ul.insertAdjacentElement('beforeend',li4);
+ul.insertAdjacentElement('beforeend',li5);
+ul.insertAdjacentElement('beforeend',li6);
+ul.insertAdjacentElement('beforeend',li7);
+ul.insertAdjacentElement('beforeend',li8);
+ul.insertAdjacentElement('beforeend',li9);
+
+let b= document.querySelector('#answer');
+b.addEventListener('click',printAnswer);
+function printAnswer(){
+  let rs=document.querySelector('select[name=tosi-select]');
+  for(let i=0;i<12;i++){
+    let r=String(i);
+    if(rs.selectedIndex==){
+      
+      
+    }
+  }
+}
