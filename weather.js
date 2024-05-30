@@ -67,3 +67,4 @@ console.log('都市名:'+data.name);
 let div=document.querySelector('p#result');
 let ul=document.createElement('ul');
 div.insertAdjacentElement('beforeed',ul);
+let li=document.
