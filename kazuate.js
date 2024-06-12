@@ -3,8 +3,8 @@ let kotae = Math.floor(Math.random()*10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
 // 入力回数（予想回数）
-let kaisu = 1;
-let kiroku=1;
+let kaisu = 0;
+let kiroku=0;
 let text;
 
 let b=document.querySelector('#print');
