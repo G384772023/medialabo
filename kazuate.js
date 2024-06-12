@@ -21,13 +21,13 @@ let yoso = Number(mae);
 // 課題3-1: 正解判定する
 // kotae と yoso が一致するかどうか調べて結果を出力
 // 課題3-1における出力先はコンソール
+kaisu=kaisu+1;
+kiroku=kiroku+1;
 let p1=document.querySelector('span#kaisu');
 p1.textContent=kaisu;
 let p2=document.querySelector('span#answer');
 p2.textContent=yoso; 
 let p3=document.querySelector('p#result');
-kaisu=kaisu+1;
-kiroku=kiroku+1;
 if(kiroku<3){
   if(kotae===yoso){
     text=("正解です。おめでとう！");
