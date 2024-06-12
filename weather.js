@@ -1,3 +1,4 @@
+/*
 let data = {
   "coord": {
     "lon": 116.3972,
@@ -44,28 +45,8 @@ let data = {
   "name": "北京市",
   "cod": 200
 };
-
+*/
 ////////// 課題3-2 ここからプログラムを書こう
-//緯度
-console.log('緯度:'+data.coord.lon);
-//経度
-console.log('緯度:'+data.coord.lat);
-//天気
-console.log('天気:'+data.weather[0].description );
-//最低気温
-console.log('最低気温:'+data.main.temp_min );
-//最高気温
-console.log('最高気温:'+data.main.temp_max);
-//湿度
-console.log('湿度:'+data.main.humidity);
-//風速
-console.log('風速:'+data.wind.speed);
-//風向
-console.log('風向:'+data.wind.deg);
-//都市名
-console.log('都市名:'+data.name);
-
-
 
 let div=document.querySelector('div#result');
 let ul=document.createElement('ul');
@@ -79,6 +60,44 @@ let li6=document.createElement('li');
 let li7=document.createElement('li');
 let li8=document.createElement('li');
 let li9=document.createElement('li');
+li1.textContent='緯度:';
+li2.textContent='経度:';
+li3.textContent='天気:';
+li4.textContent='最低気温:';
+li5.textContent='最高気温:';
+li6.textContent='湿度:';
+li7.textContent='風速:';
+li8.textContent='風向:';
+li9.textContent='都市名:';
+ul.insertAdjacentElement('beforeend',li1);
+ul.insertAdjacentElement('beforeend',li2);
+ul.insertAdjacentElement('beforeend',li3);
+ul.insertAdjacentElement('beforeend',li4);
+ul.insertAdjacentElement('beforeend',li5);
+ul.insertAdjacentElement('beforeend',li6);
+ul.insertAdjacentElement('beforeend',li7);
+ul.insertAdjacentElement('beforeend',li8);
+ul.insertAdjacentElement('beforeend',li9);
+let b= document.querySelector('#answer');
+b.addEventListener('click',showSelectResult);
+function showSelectResult(){
+
+  let rs=document.querySelector('select#tosi-select');
+  let idx=rs.selectedIndex;
+  let os=rs.querySelectorAll('option');
+  let o=os.item(idx);
+  let url='https://www.nishita-lab.org/web-contents/jsons/openweather/'+o.id+'.json';
+  axios.get(url)
+       .then(showResult)
+       .catch(showError)
+       .then(finish);
+  console.log(o.textContent);  
+}
+function showResult(resp){
+  let data=resp.data;
+  if(typeof data =='string'){
+    data=JSON.parse(data);
+  }
 li1.textContent='緯度:'+data.coord.lon;
 li2.textContent='経度:'+data.coord.lat;
 li3.textContent='天気:'+data.weather[0].description;
@@ -97,16 +116,10 @@ ul.insertAdjacentElement('beforeend',li6);
 ul.insertAdjacentElement('beforeend',li7);
 ul.insertAdjacentElement('beforeend',li8);
 ul.insertAdjacentElement('beforeend',li9);
-
-let b= document.querySelector('#answer');
-b.addEventListener('click',printAnswer);
-function printAnswer(){
-  let rs=document.querySelector('select[name=tosi-select]');
-  for(let i=0;i<12;i++){
-    let r=String(i);
-    if(rs.selectedIndex==){
-      
-      
-    }
-  }
+}
+function showError(err){
+  console.log(err);
+}
+function finish(){
+  console.log('Ajax 通信が終わりました');
 }

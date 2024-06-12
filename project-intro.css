@@ -4,6 +4,10 @@ h1{
 .betu{
        color:rgb(54, 129, 241);
 }
+ul{
+    border: 4px solid rgb(54, 184, 245);
+    padding:5px,5px;
+}
 ul li {
     color:rgb(90, 244, 92);
 }

@@ -5,6 +5,7 @@ h1{
 p{
     border: 4px solid rgb(54, 184, 245);
     padding:5px;
+    background-color: rgb(54, 184, 245);
 }
 a:link{
     text-decoration:rgb(90, 244, 92) underline;
